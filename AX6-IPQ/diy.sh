@@ -20,8 +20,8 @@ git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/l
 #git clone --depth 1 https://github.com/sbwml/luci-app-alist package/alist
 #git clone --depth=1  https://github.com/kenzok8/small-package package/small-package
 #git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-zerotier
-#git_sparse_clone main https://github.com/kiddin9/kwrt-packages vlmcsd
-#git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-vlmcsd
+git_sparse_clone main https://github.com/kiddin9/kwrt-packages vlmcsd
+git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-vlmcsd
 #git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-socat
 
 # 替换luci-app-openvpn-server imm源的启动不了服务！
