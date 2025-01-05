@@ -47,7 +47,11 @@ rm -rf feeds/luci/applications/luci-app-argon-config
 #rm -rf feeds/luci/applications/luci-app-alist
 #rm -rf feeds/luci/applications/openwrt-passwall
 
-
+#添加istore
+echo >> feeds.conf.default
+echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
+./scripts/feeds update istore
+./scripts/feeds install -d y -p istore luci-app-store
 #修改默认IP
 #sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_generate
 
