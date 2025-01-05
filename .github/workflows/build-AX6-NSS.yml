@@ -6,7 +6,7 @@ on:
 env:
   REPO_URL: https://github.com/VIKINGYFY/immortalwrt.git
   REPO_BRANCH: main
-  CONFIG_FILE: AX6-IPQ/.config
+  CONFIG_FILE: AX6-IPQ/.config1
   DIY_SH: AX6-IPQ/diy.sh
   FILES: AX6-IPQ/files
   TZ: Asia/Shanghai
