@@ -41,6 +41,8 @@ git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-vlmcsd
 #删除库中的插件，使用自定义源中的包。
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/applications/luci-app-argon-config
+rm -rf feeds/packages/net/vlmcsd
+rm -rf feeds/luci/applications/luci-app-vlmcsd
 #rm -rf feeds/luci/applications/luci-app-ddns-go
 #rm -rf feeds/packages/net/ddns-go
 #rm -rf feeds/packages/net/alist
