@@ -1,3 +1,4 @@
+
 name: Build OpenWRT for AX6-NSS
 
 on:
@@ -40,7 +41,6 @@ jobs:
         echo "=============================================================================="
         df -hT
         echo "=============================================================================="
-
     - name: "Optimize Disk Space"
       uses: "hugoalh/disk-space-optimizer-ghaction@v0.8.1"
       with:
@@ -93,12 +93,10 @@ jobs:
         sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
         sudo chown $USER:$GROUPS $GITHUB_WORKSPACE
-
     - name: Clone source code
       working-directory: ./
       run: |
         git clone $REPO_URL -b $REPO_BRANCH openwrt
-
     - name: cache wrt build
       uses: stupidloud/cachewrtbuild@main
       with:
@@ -111,7 +109,6 @@ jobs:
       run: |
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-
     - name: Load custom config
       run: |
         [ -e $FILES ] && mv $FILES openwrt/files
@@ -119,7 +116,6 @@ jobs:
         chmod +x $DIY_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_SH
-
     # - name: SSH connect to Actions
       # uses: P3TERX/ssh2actions@main
       # if: (github.event.inputs.ssh == 'true') || contains(github.event.action, 'ssh')
@@ -131,16 +127,13 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-
     - name: Compile the firmware
       run: |
         chmod -R 755 openwrt
         cd openwrt
         echo -e "$(nproc) thread compile"
-        # 禁用并行编译，避免并行问题
-        make -j1 V=s || make -j1 V=s
+        make -j$(nproc) || make -j1 || make -j1 V=s
         echo "compile_status=success" >> $GITHUB_ENV
-
     # - name : Upload packages
       # uses: actions/upload-artifact@master
       # if: always()
