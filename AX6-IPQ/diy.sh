@@ -9,12 +9,6 @@ function git_sparse_clone() {
   cd .. && rm -rf $repodir
 }
 
-#加依赖包
-./scripts/feeds update -a
-./scripts/feeds install kmod-fast-classifier
-./scripts/feeds install kmod-shortcut-fe-cm
-./scripts/feeds install kmod-shortcut-fe-drv
-
 # Add packages
 #添加科学上网源
 #git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
