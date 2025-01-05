@@ -23,6 +23,8 @@ git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/l
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages vlmcsd
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-vlmcsd
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-turboacc
+git_sparse_clone main https://github.com/kiddin9/kwrt-packages qosmate
+git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-qosmate
 #git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-socat
 
 # 替换luci-app-openvpn-server imm源的启动不了服务！
