@@ -18,7 +18,7 @@ src/gz immortalwrt_luci https://downloads.immortalwrt.org/releases/24.10-SNAPSHO
 src/gz immortalwrt_packages https://downloads.immortalwrt.org/releases/24.10-SNAPSHOT/packages/aarch64_cortex-a53/packages  
 src/gz immortalwrt_routing https://downloads.immortalwrt.org/releases/24.10-SNAPSHOT/packages/aarch64_cortex-a53/routing  
 src/gz immortalwrt_telephony https://downloads.immortalwrt.org/releases/24.10-SNAPSHOT/packages/aarch64_cortex-a53/telephony
-开机后执行：
+开机后执行：  
 uci set network.@device[0].packet_steering=0  
 uci set network.@device[0].flow_offloading=0  
 uci set network.@device[0].flow_offloading_hw=0  
