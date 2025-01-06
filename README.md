@@ -1,6 +1,10 @@
 ### 自用AX6一键编译脚本
 - IMM官方项目没有NSS加速，要编译没有nss加速的是首选！
-
+开机后执行：
+uci set network.@device[0].packet_steering=0
+uci set network.@device[0].flow_offloading=0
+uci set network.@device[0].flow_offloading_hw=0
+uci commit network
 - LEDE显示有nss，但是测试WIFI有问题，内网中上传速度特别慢。
 
 - 以下两个项目是支持大分区，而且带NSS加速！
