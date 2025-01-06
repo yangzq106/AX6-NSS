@@ -11,8 +11,8 @@ function git_sparse_clone() {
 
 # Add packages
 #添加科学上网源
-#git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
-#git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
+git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
+git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 #git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
@@ -50,7 +50,8 @@ rm -rf feeds/luci/applications/luci-app-vlmcsd
 #rm -rf feeds/packages/net/ddns-go
 #rm -rf feeds/packages/net/alist
 #rm -rf feeds/luci/applications/luci-app-alist
-#rm -rf feeds/luci/applications/openwrt-passwall
+rm -rf feeds/luci/applications/openwrt-passwall
+rm -rf feeds/luci/applications/openwrt-passwall-packages
 
 #添加istore
 echo >> feeds.conf.default
