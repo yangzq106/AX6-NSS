@@ -9,11 +9,14 @@
 2、VIKINGYFY： https://github.com/VIKINGYFY/immortalwrt.git build-AX6-NSS脚本【该项目nss加速满血，500m跑满cpu占用个位数!】
 
 - 注意：
-开机后执行
+
+开机后执行：
+
 uci set network.@device[0].packet_steering=0
 uci set network.@device[0].flow_offloading=0
 uci set network.@device[0].flow_offloading_hw=0
 uci commit network
+
 nss加速默认是开启的，不要去防火墙里打开系统的硬件或软件卸载加速，会有不可预测的冲突！
 测试只要跑大流量cpu占用很低或没有就是NSS加速在起作用了！  
 在线ipk软件源：  
