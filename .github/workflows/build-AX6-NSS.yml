@@ -3,7 +3,13 @@ name: Build OpenWRT for AX6-NSS
 
 on:
   workflow_dispatch:
-
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
+  schedule:
+    - cron: 37 3 * * 4
 env:
   REPO_URL: https://github.com/VIKINGYFY/immortalwrt.git
   REPO_BRANCH: main
