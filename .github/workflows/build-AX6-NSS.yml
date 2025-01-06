@@ -2,6 +2,7 @@
 name: Build OpenWRT for AX6-NSS
 
 on:
+  repository_dispatch:
   workflow_dispatch:
     inputs:
       ssh:
