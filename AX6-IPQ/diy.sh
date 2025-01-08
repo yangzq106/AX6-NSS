@@ -11,8 +11,8 @@ function git_sparse_clone() {
 
 # Add packages
 #添加科学上网源
-git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
-git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
+#git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
+#git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 #git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
@@ -52,7 +52,15 @@ rm -rf feeds/luci/applications/luci-app-vlmcsd
 #rm -rf feeds/luci/applications/luci-app-alist
 rm -rf feeds/luci/applications/openwrt-passwall
 rm -rf feeds/luci/applications/openwrt-passwall-packages
-
+#删除&替换immortal面板及部分冲突默认软件
+rm -rf feeds/luci/modules/luci-base
+rm -rf feeds/luci/modules/luci-mod-status
+rm -rf feeds/packages/utils/coremark
+rm -rf feeds/packages/net/v2ray-geodata
+#克隆immortalwrt luci到本地
+git clone https://github.com/immortalwrt/luci
+cp -r luci/modules/luci-base feeds/luci/modules
+cp -r luci/modules/luci-mod-status feeds/luci/modules
 #添加istore
 echo >> feeds.conf.default
 echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
