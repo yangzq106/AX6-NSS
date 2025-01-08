@@ -41,6 +41,16 @@ git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-qosmate
 #rm -rf feeds/luci/applications/luci-app-socat
 #git_sparse_clone main https://github.com/chenmozhijin/luci-app-socat luci-app-socat
 
+#删除&替换immortal面板及部分冲突默认软件
+rm -rf feeds/luci/modules/luci-base
+rm -rf feeds/luci/modules/luci-mod-status
+rm -rf feeds/packages/utils/coremark
+rm -rf feeds/packages/net/v2ray-geodata
+#克隆immortalwrt luci到本地
+git clone https://github.com/immortalwrt/luci
+cp -r luci/modules/luci-base feeds/luci/modules
+cp -r luci/modules/luci-mod-status feeds/luci/modules
+
 #删除库中的插件，使用自定义源中的包。
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/applications/luci-app-argon-config
@@ -52,20 +62,13 @@ rm -rf feeds/luci/applications/luci-app-vlmcsd
 #rm -rf feeds/luci/applications/luci-app-alist
 rm -rf feeds/luci/applications/openwrt-passwall
 rm -rf feeds/luci/applications/openwrt-passwall-packages
-#删除&替换immortal面板及部分冲突默认软件
-rm -rf feeds/luci/modules/luci-base
-rm -rf feeds/luci/modules/luci-mod-status
-rm -rf feeds/packages/utils/coremark
-rm -rf feeds/packages/net/v2ray-geodata
-#克隆immortalwrt luci到本地
-git clone https://github.com/immortalwrt/luci
-cp -r luci/modules/luci-base feeds/luci/modules
-cp -r luci/modules/luci-mod-status feeds/luci/modules
+
 #添加istore
 echo >> feeds.conf.default
 echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
 ./scripts/feeds update istore
 ./scripts/feeds install -d y -p istore luci-app-store
+
 #修改默认IP
 sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 
