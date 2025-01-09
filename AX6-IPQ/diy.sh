@@ -13,8 +13,8 @@ function git_sparse_clone() {
 #添加科学上网源
 #git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
 #git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
-git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+#git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+#git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 #git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
 #git clone --depth 1 https://github.com/sbwml/luci-app-mosdns package/mosdns
 #git clone --depth 1 https://github.com/sbwml/luci-app-alist package/alist
@@ -52,8 +52,8 @@ cp -r luci/modules/luci-base feeds/luci/modules
 cp -r luci/modules/luci-mod-status feeds/luci/modules
 
 #删除库中的插件，使用自定义源中的包。
-rm -rf feeds/luci/themes/luci-theme-argon
-rm -rf feeds/luci/applications/luci-app-argon-config
+#rm -rf feeds/luci/themes/luci-theme-argon
+#rm -rf feeds/luci/applications/luci-app-argon-config
 #rm -rf feeds/packages/net/vlmcsd
 #rm -rf feeds/luci/applications/luci-app-vlmcsd
 #rm -rf feeds/luci/applications/luci-app-ddns-go
