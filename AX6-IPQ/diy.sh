@@ -60,8 +60,8 @@ rm -rf feeds/luci/applications/luci-app-argon-config
 #rm -rf feeds/packages/net/ddns-go
 #rm -rf feeds/packages/net/alist
 #rm -rf feeds/luci/applications/luci-app-alist
-rm -rf feeds/luci/applications/openwrt-passwall
-rm -rf feeds/luci/applications/openwrt-passwall-packages
+#rm -rf feeds/luci/applications/openwrt-passwall
+#rm -rf feeds/luci/applications/openwrt-passwall-packages
 
 #添加istore
 echo >> feeds.conf.default
