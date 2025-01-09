@@ -41,16 +41,6 @@ git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-qosmate
 #rm -rf feeds/luci/applications/luci-app-socat
 #git_sparse_clone main https://github.com/chenmozhijin/luci-app-socat luci-app-socat
 
-#删除&替换immortal面板及部分冲突默认软件
-rm -rf feeds/luci/modules/luci-base
-rm -rf feeds/luci/modules/luci-mod-status
-rm -rf feeds/packages/utils/coremark
-rm -rf feeds/packages/net/v2ray-geodata
-#克隆immortalwrt luci到本地
-git clone https://github.com/immortalwrt/luci
-cp -r luci/modules/luci-base feeds/luci/modules
-cp -r luci/modules/luci-mod-status feeds/luci/modules
-
 #删除库中的插件，使用自定义源中的包。
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/applications/luci-app-argon-config
