@@ -10,7 +10,9 @@
 
 - 注意：  
 nss加速默认是开启的，不要去防火墙里打开系统的硬件或软件卸载加速，会有不可预测的冲突！
-测试只要跑大流量cpu占用很低或没有就是NSS加速在起作用了！  
+测试只要跑大流量cpu占用很低或没有就是NSS加速在起作用了！
+开机后执行：  
+Turbo ACC 网络加速设置---取消勾选软件流量分载。  
 在线ipk软件源：  
 src/gz immortalwrt_core https://downloads.immortalwrt.org/releases/24.10-SNAPSHOT/targets/qualcommax/ipq807x/packages/  
 src/gz immortalwrt_base https://downloads.immortalwrt.org/releases/24.10-SNAPSHOT/packages/aarch64_cortex-a53/base  
@@ -18,18 +20,16 @@ src/gz immortalwrt_luci https://downloads.immortalwrt.org/releases/24.10-SNAPSHO
 src/gz immortalwrt_packages https://downloads.immortalwrt.org/releases/24.10-SNAPSHOT/packages/aarch64_cortex-a53/packages  
 src/gz immortalwrt_routing https://downloads.immortalwrt.org/releases/24.10-SNAPSHOT/packages/aarch64_cortex-a53/routing  
 src/gz immortalwrt_telephony https://downloads.immortalwrt.org/releases/24.10-SNAPSHOT/packages/aarch64_cortex-a53/telephony  
-开机后执行：  
-Turbo ACC 网络加速设置---取消勾选软件流量分载。
 
-- 高通OPENWRT其他大佬项目：
+- 高通OPENWRT其他大佬项目：  
 
-下面的这些项目带nss加速，但是只支持官方的分区！
+下面的这些项目带nss加速，但是只支持官方的分区！  
 
-https://github.com/JiaY-shi/openwrt.git
+https://github.com/JiaY-shi/openwrt.git  
 
-https://github.com/qosmio/openwrt-ipq.git
+https://github.com/qosmio/openwrt-ipq.git  
 
-https://github.com/King-Of-Knights/openwrt-6.x.git
+https://github.com/King-Of-Knights/openwrt-6.x.git  
 
 
 ![微信截图_20241116071934](https://github.com/user-attachments/assets/617a2d49-0f51-485c-a20a-b25cde5a8e82)
