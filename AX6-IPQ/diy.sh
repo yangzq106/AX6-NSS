@@ -26,6 +26,8 @@ git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-turboacc
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages qosmate
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-qosmate
 #git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-socat
+git_sparse_clone dev https://github.com/vernesong/OpenClash luci-app-openclash
+
 
 # 替换luci-app-openvpn-server imm源的启动不了服务！
 #rm -rf feeds/luci/applications/luci-app-openvpn-server
@@ -42,6 +44,7 @@ git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-qosmate
 #git_sparse_clone main https://github.com/chenmozhijin/luci-app-socat luci-app-socat
 
 #删除库中的插件，使用自定义源中的包。
+rm -rf feeds/luci/applications/luci-app-openclash
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/applications/luci-app-argon-config
 rm -rf feeds/packages/net/vlmcsd
