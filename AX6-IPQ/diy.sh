@@ -26,8 +26,12 @@ git_sparse_clone main https://github.com/kiddin9/kwrt-packages qosmate
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-qosmate
 #git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-socat
 git_sparse_clone dev https://github.com/vernesong/OpenClash luci-app-openclash
-git_sparse_clone v5 https://github.com/sbwml/luci-app-mosdns luci-app-mosdns
 
+
+# mosdns
+git_sparse_clone v5 https://github.com/sbwml/luci-app-mosdns luci-app-mosdns
+git_sparse_clone v5 https://github.com/sbwml/luci-app-mosdns mosdns
+git_sparse_clone v5 https://github.com/sbwml/luci-app-mosdns v2dat
 
 # 替换luci-app-openvpn-server imm源的启动不了服务！
 #rm -rf feeds/luci/applications/luci-app-openvpn-server
