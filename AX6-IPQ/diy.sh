@@ -16,7 +16,7 @@ function git_sparse_clone() {
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 #git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
-#git clone --depth 1 https://github.com/sbwml/luci-app-mosdns package/mosdns
+git clone --depth 1 https://github.com/sbwml/luci-app-mosdns package/mosdns
 #git clone --depth 1 https://github.com/sbwml/luci-app-alist package/alist
 #git clone --depth=1  https://github.com/kenzok8/small-package package/small-package
 #git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-zerotier
