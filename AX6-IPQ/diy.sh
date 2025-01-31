@@ -17,6 +17,7 @@ function git_sparse_clone() {
 #git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 git clone --depth 1 https://github.com/hudra0/qosmate package/qosmate
 git clone --depth 1 https://github.com/hudra0/luci-app-qosmate package/luci-app-qosmate
+git clone --depth 1 https://github.com/TerryLip/AX6NSS/tree/qualcommax-6.x-nss-wifi/package/new/luci-app-vlmcsd package/luci-app-vlmcsd
 #git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
 #git clone --depth 1 https://github.com/sbwml/luci-app-alist package/alist
 #git clone --depth=1  https://github.com/kenzok8/small-package package/small-package
