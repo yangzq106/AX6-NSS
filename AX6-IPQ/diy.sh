@@ -32,9 +32,6 @@ git_sparse_clone qualcommax-6.x-nss-wifi https://github.com/TerryLip/AX6NSS pack
 git_sparse_clone qualcommax-6.x-nss-wifi https://github.com/TerryLip/AX6NSS package/new/vlmcsd
 git_sparse_clone qualcommax-6.x-nss-wifi https://github.com/TerryLip/AX6NSS package/new/luci-app-vlmcsd
 
-
-
-
 # mosdns
 git_sparse_clone v5 https://github.com/sbwml/luci-app-mosdns luci-app-mosdns
 git_sparse_clone v5 https://github.com/sbwml/luci-app-mosdns mosdns
