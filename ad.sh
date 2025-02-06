@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# 删除已存在的 anti-AD 规则文件
+# 删除已存在的 adblockfilters 规则文件
 rm /tmp/dnsmasq.cfg01411c.d/adblockfilters-for-dnsmasq.conf
 echo "拉取 anti-AD 广告过滤规则…"
 # 注意自行核实 /tmp 下的 dnsmasq.d 文件夹名称，并修改对应代码  
