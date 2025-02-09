@@ -1,12 +1,20 @@
-name: Build OpenWRT for AX6-IPQ
+
+name: Build OpenWRT for AX6-NSS
 
 on:
+  repository_dispatch:
   workflow_dispatch:
-
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
+  schedule:
+    - cron: 37 3 * * *
 env:
-  REPO_URL: https://github.com/LiBwrt-op/openwrt-6.x.git
-  REPO_BRANCH: openwrt-24.10
-  CONFIG_FILE: AX6-IPQ/.config-ipq
+  REPO_URL: https://github.com/LiBwrt/openwrt-6.x
+  REPO_BRANCH: kernel-6.12
+  CONFIG_FILE: AX6-IPQ/.config1
   DIY_SH: AX6-IPQ/diy.sh
   FILES: AX6-IPQ/files
   TZ: Asia/Shanghai
@@ -40,7 +48,6 @@ jobs:
         echo "=============================================================================="
         df -hT
         echo "=============================================================================="
-
     - name: "Optimize Disk Space"
       uses: "hugoalh/disk-space-optimizer-ghaction@v0.8.1"
       with:
@@ -93,17 +100,15 @@ jobs:
         sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
         sudo chown $USER:$GROUPS $GITHUB_WORKSPACE
-
     - name: Clone source code
       working-directory: ./
       run: |
         git clone $REPO_URL -b $REPO_BRANCH openwrt
-
     - name: cache wrt build
       uses: stupidloud/cachewrtbuild@main
       with:
         ccache: 'true'
-        mixkey: AX6-IPQ-${{ env.REPO_BRANCH }}
+        mixkey: AX6-NSS-${{ env.REPO_BRANCH }}
         prefix: ${{ github.workspace }}/openwrt
         
     - name: Update & Install feeds
@@ -111,7 +116,6 @@ jobs:
       run: |
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-
     - name: Load custom config
       run: |
         [ -e $FILES ] && mv $FILES openwrt/files
@@ -119,7 +123,6 @@ jobs:
         chmod +x $DIY_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_SH
-
     # - name: SSH connect to Actions
       # uses: P3TERX/ssh2actions@main
       # if: (github.event.inputs.ssh == 'true') || contains(github.event.action, 'ssh')
@@ -131,20 +134,18 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-
     - name: Compile the firmware
       run: |
         chmod -R 755 openwrt
         cd openwrt
         echo -e "$(nproc) thread compile"
-        make -j$(nproc) || make -j1 || make -j1 V=s
+        make -j1 V=s || make -j1 V=s
         echo "compile_status=success" >> $GITHUB_ENV
-
     # - name : Upload packages
       # uses: actions/upload-artifact@master
       # if: always()
       # with:
-        # name: AX6-IPQ
+        # name: AX6-NSS
         # path: openwrt/bin/targets
     - name: cp output to upload file
       run: |
@@ -159,18 +160,18 @@ jobs:
     - name: Upload OpenWrt Firmware to Release
       uses: ncipollo/release-action@main
       with:
-        tag: AX6_IPQ_${{ env.CURRENT_DATE }}
+        tag: AX6_NSS_${{ env.CURRENT_DATE }}
         artifacts: upload/*
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
-          基于LiBwrt的openwrt代码构建
+          基于VIKINGYFY合并的openwrt构建
           首次使用建议全新刷写
-          是否有NSS加速自己测试！
+          NSS满血加速！
           * 基本信息
-          IP: 192.168.1.1
+          IP: 10.0.0.1
           账户: root
-          密码: password
+          密码: 空
           
     - name: Delete old releases
       uses: dev-drprasad/delete-older-releases@master
