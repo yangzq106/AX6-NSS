@@ -10,7 +10,7 @@ on:
         required: false
         default: 'false'
   schedule:
-    - cron: 37 3 * * *
+    - cron: 37 3 * * 4
 env:
   REPO_URL: https://github.com/LiBwrt/openwrt-6.x
   REPO_BRANCH: kernel-6.12
