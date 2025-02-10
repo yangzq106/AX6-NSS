@@ -13,8 +13,8 @@ function git_sparse_clone() {
 #添加科学上网源
 #git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
 #git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
-#git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-#git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 git clone --depth 1 https://github.com/hudra0/qosmate package/qosmate
 git clone --depth 1 https://github.com/hudra0/luci-app-qosmate package/luci-app-qosmate
 #git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
@@ -27,8 +27,8 @@ git clone --depth 1 https://github.com/hudra0/luci-app-qosmate package/luci-app-
 git_sparse_clone dev https://github.com/vernesong/OpenClash luci-app-openclash
 #git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-turboacc
 #拉取TerryLip大佬部分源码，感谢大佬对nss的支持！
-git_sparse_clone qualcommax-6.x-nss-wifi https://github.com/TerryLip/AX6NSS package/new/luci-theme-argon
-git_sparse_clone qualcommax-6.x-nss-wifi https://github.com/TerryLip/AX6NSS package/new/luci-app-argon-config
+#git_sparse_clone qualcommax-6.x-nss-wifi https://github.com/TerryLip/AX6NSS package/new/luci-theme-argon
+#git_sparse_clone qualcommax-6.x-nss-wifi https://github.com/TerryLip/AX6NSS package/new/luci-app-argon-config
 #git_sparse_clone qualcommax-6.x-nss-wifi https://github.com/TerryLip/AX6NSS package/new/luci-app-turboacc
 git_sparse_clone qualcommax-6.x-nss-wifi https://github.com/TerryLip/AX6NSS package/new/vlmcsd
 git_sparse_clone qualcommax-6.x-nss-wifi https://github.com/TerryLip/AX6NSS package/new/luci-app-vlmcsd
