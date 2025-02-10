@@ -25,14 +25,15 @@ git clone --depth 1 https://github.com/hudra0/luci-app-qosmate package/luci-app-
 #git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-vlmcsd
 #git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-socat
 git_sparse_clone dev https://github.com/vernesong/OpenClash luci-app-openclash
-git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-turboacc
+#git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-turboacc
 #拉取TerryLip大佬部分源码，感谢大佬对nss的支持！
 git_sparse_clone qualcommax-6.x-nss-wifi https://github.com/TerryLip/AX6NSS package/new/luci-theme-argon
 git_sparse_clone qualcommax-6.x-nss-wifi https://github.com/TerryLip/AX6NSS package/new/luci-app-argon-config
 #git_sparse_clone qualcommax-6.x-nss-wifi https://github.com/TerryLip/AX6NSS package/new/luci-app-turboacc
 git_sparse_clone qualcommax-6.x-nss-wifi https://github.com/TerryLip/AX6NSS package/new/vlmcsd
 git_sparse_clone qualcommax-6.x-nss-wifi https://github.com/TerryLip/AX6NSS package/new/luci-app-vlmcsd
-
+#turboacc
+curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
 # mosdns
 git_sparse_clone v5 https://github.com/sbwml/luci-app-mosdns luci-app-mosdns
 git_sparse_clone v5 https://github.com/sbwml/luci-app-mosdns mosdns
