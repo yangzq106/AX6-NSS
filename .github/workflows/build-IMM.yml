@@ -2,7 +2,14 @@ name: Build OpenWRT-IMM for AX6
 
 on:
   workflow_dispatch:
-
+  workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
+  schedule:
+    - cron: 37 3 * * *
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt.git
   REPO_BRANCH: openwrt-23.05
