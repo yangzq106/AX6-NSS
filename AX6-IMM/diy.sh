@@ -36,8 +36,8 @@ git_sparse_clone qualcommax-6.x-nss-wifi https://github.com/TerryLip/AX6NSS pack
 curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
 # mosdns
 git_sparse_clone master https://github.com/QiuSimons/openwrt-mos luci-app-mosdns
-git_sparse_clone master https://github.com/sbwml/luci-app-mosdns mosdns
-git_sparse_clone master https://github.com/sbwml/luci-app-mosdns v2ray-geodata
+git_sparse_clone master https://github.com/QiuSimons/openwrt-mos mosdns
+git_sparse_clone master https://github.com/QiuSimons/openwrt-mos v2ray-geodata
 
 # 替换luci-app-openvpn-server imm源的启动不了服务！
 #rm -rf feeds/luci/applications/luci-app-openvpn-server
