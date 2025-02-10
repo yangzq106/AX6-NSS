@@ -8,7 +8,7 @@
 1、LiBwrt：https://github.com/LiBwrt-op/openwrt-6.x.git build-AX6-IPQ脚本【该项目近期发现nss加速启动不了】  
 2、VIKINGYFY： https://github.com/VIKINGYFY/immortalwrt.git build-AX6-NSS脚本【该项目nss加速满血，500m跑满cpu占用个位数!】  
 
-开机后执行：  
+NSS开机后执行：  
 Turbo ACC 网络加速设置---取消勾选软件流量分载。  
 
 - 注意：  
