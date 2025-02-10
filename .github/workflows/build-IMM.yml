@@ -165,7 +165,7 @@ jobs:
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
-          基于immortalwrt23.0稳定版构建
+          基于immortalwrt23.05稳定版构建
           首次使用建议全新刷写
           * 基本信息
           IP: 10.0.0.1
