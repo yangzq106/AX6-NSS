@@ -6,7 +6,7 @@ on:
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt.git
   REPO_BRANCH: openwrt-23.05
-  CONFIG_FILE: AX6-IMM/.config
+  CONFIG_FILE: AX6-IMM/.config-lite
   DIY_SH: AX6-IMM/diy.sh
   FILES: AX6-IMM/files
   TZ: Asia/Shanghai
