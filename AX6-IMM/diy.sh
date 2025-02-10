@@ -33,8 +33,6 @@ git_sparse_clone qualcommax-6.x-nss-wifi https://github.com/TerryLip/AX6NSS pack
 git_sparse_clone qualcommax-6.x-nss-wifi https://github.com/TerryLip/AX6NSS package/new/vlmcsd
 git_sparse_clone qualcommax-6.x-nss-wifi https://github.com/TerryLip/AX6NSS package/new/luci-app-vlmcsd
 
-#turboacc补丁
-curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh --no-sfe
 # mosdns
 git_sparse_clone v5 https://github.com/sbwml/luci-app-mosdns luci-app-mosdns
 git_sparse_clone v5 https://github.com/sbwml/luci-app-mosdns mosdns
