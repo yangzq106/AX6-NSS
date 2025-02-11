@@ -139,7 +139,7 @@ jobs:
         chmod -R 755 openwrt
         cd openwrt
         echo -e "$(nproc) thread compile"
-        make -j1 V=s || make -j1 V=s
+        make -j$(nproc) || make -j1 V=s
         echo "compile_status=success" >> $GITHUB_ENV
     # - name : Upload packages
       # uses: actions/upload-artifact@master
