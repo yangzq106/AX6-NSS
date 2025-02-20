@@ -144,7 +144,7 @@ jobs:
         chmod -R 755 openwrt
         cd openwrt
         echo -e "$(nproc) thread compile"
-        make -j$(nproc) || make -j1 || make -j1 V=s
+        make -j$(nproc) || make -j1 V=s
         echo "compile_status=success" >> $GITHUB_ENV
 
     # - name : Upload packages
@@ -176,7 +176,7 @@ jobs:
           首次使用建议全新刷写
           nss是否有效自己测试！
           * 基本信息
-          IP: 192.168.1.1
+          IP: 10.0.0.1
           账户: root
           密码: password
           
