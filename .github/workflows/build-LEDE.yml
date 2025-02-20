@@ -6,7 +6,7 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  CONFIG_FILE: AX6-lEDE/.config
+  CONFIG_FILE: AX6-lEDE/.config-mosdns
   DIY_SH: AX6-lEDE/diy.sh
   FILES: AX6-lEDE/files
   TZ: Asia/Shanghai
