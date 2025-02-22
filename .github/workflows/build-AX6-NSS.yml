@@ -123,7 +123,6 @@ jobs:
         chmod +x $DIY_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_SH
-        make defconfig -j$(nproc) && make clean -j$(nproc)
     # - name: SSH connect to Actions
       # uses: P3TERX/ssh2actions@main
       # if: (github.event.inputs.ssh == 'true') || contains(github.event.action, 'ssh')
@@ -131,7 +130,7 @@ jobs:
     - name: Download package
       working-directory: ./openwrt
       run: |
-        make defconfig
+        make defconfig -j$(nproc) && make clean -j$(nproc)
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
