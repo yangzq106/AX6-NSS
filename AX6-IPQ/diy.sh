@@ -64,6 +64,30 @@ rm -rf feeds/luci/applications/luci-app-vlmcsd
 #rm -rf feeds/luci/applications/openwrt-passwall
 #rm -rf feeds/luci/applications/openwrt-passwall-packages
 
+
+#修复TailScale配置文件冲突
+TS_FILE=$(find ../feeds/packages/ -maxdepth 3 -type f -wholename "*/tailscale/Makefile")
+if [ -f "$TS_FILE" ]; then
+	sed -i '/\/files/d' $TS_FILE
+
+	cd $PKG_PATH && echo "tailscale has been fixed!"
+fi
+
+#修复Coremark编译失败
+CM_FILE=$(find ../feeds/packages/ -maxdepth 3 -type f -wholename "*/coremark/Makefile")
+if [ -f "$CM_FILE" ]; then
+	sed -i 's/mkdir/mkdir -p/g' $CM_FILE
+
+	cd $PKG_PATH && echo "coremark has been fixed!"
+fi
+
+#修复libffi编译失败
+LF_FILE=$(find ../feeds/packages/ -maxdepth 3 -type f -wholename "*/libffi/Makefile")
+if [ -f "$LF_FILE" ]; then
+	sed -i '/autoreconf/d' $LF_FILE
+
+	cd $PKG_PATH && echo "libffi has been fixed!"
+fi
 #添加istore
 echo >> feeds.conf.default
 echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
