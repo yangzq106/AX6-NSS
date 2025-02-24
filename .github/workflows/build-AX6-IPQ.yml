@@ -1,5 +1,5 @@
 
-name: Build OpenWRT for AX6-NSS-IPQ
+name: Build OpenWRT for AX6-IPQ
 
 on:
   repository_dispatch:
@@ -10,7 +10,7 @@ on:
         required: false
         default: 'false'
   schedule:
-    - cron: 37 3 * * 4
+    - cron: 37 3 * * *
 env:
   REPO_URL: https://github.com/LiBwrt/openwrt-6.x
   REPO_BRANCH: kernel-6.12
@@ -108,7 +108,7 @@ jobs:
       uses: stupidloud/cachewrtbuild@main
       with:
         ccache: 'true'
-        mixkey: AX6-NSS-${{ env.REPO_BRANCH }}
+        mixkey: AX6-IPQ-${{ env.REPO_BRANCH }}
         prefix: ${{ github.workspace }}/openwrt
         
     - name: Update & Install feeds
@@ -130,7 +130,7 @@ jobs:
     - name: Download package
       working-directory: ./openwrt
       run: |
-        make defconfig
+        make defconfig -j$(nproc) && make clean -j$(nproc)
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
@@ -139,13 +139,13 @@ jobs:
         chmod -R 755 openwrt
         cd openwrt
         echo -e "$(nproc) thread compile"
-        make -j1 V=s || make -j1 V=s
+        make -j$(nproc) || make -j1 V=s
         echo "compile_status=success" >> $GITHUB_ENV
     # - name : Upload packages
       # uses: actions/upload-artifact@master
       # if: always()
       # with:
-        # name: AX6-NSS
+        # name: AX6-IPQ
         # path: openwrt/bin/targets
     - name: cp output to upload file
       run: |
@@ -160,12 +160,12 @@ jobs:
     - name: Upload OpenWrt Firmware to Release
       uses: ncipollo/release-action@main
       with:
-        tag: AX6_NSS_${{ env.CURRENT_DATE }}
+        tag: AX6_IPQ_${{ env.CURRENT_DATE }}
         artifacts: upload/*
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
-          基于VIKINGYFY合并的openwrt构建
+          基于VIKINGYFY合并的immortalwrt构建
           首次使用建议全新刷写
           NSS满血加速！
           * 基本信息
