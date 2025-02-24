@@ -165,7 +165,7 @@ jobs:
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
-          基于VIKINGYFY合并的immortalwrt构建
+          基于LiBwrt合并的openwrt构建
           首次使用建议全新刷写
           NSS满血加速！
           * 基本信息
