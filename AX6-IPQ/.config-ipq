@@ -75,14 +75,14 @@ CONFIG_COREMARK_NUMBER_OF_THREADS=6
 # Enable Luci App
 CONFIG_PACKAGE_luci-app-autoreboot=y
 #CONFIG_PACKAGE_luci-app-istorex=y
-CONFIG_PACKAGE_luci-app-lucky=y
+#CONFIG_PACKAGE_luci-app-lucky=y
 CONFIG_PACKAGE_luci-app-mosdns=y
 #CONFIG_PACKAGE_luci-app-smartdns=y
 CONFIG_PACKAGE_luci-app-ttyd=y
 CONFIG_PACKAGE_luci-app-upnp=y
 CONFIG_PACKAGE_luci-app-vlmcsd=y
 CONFIG_PACKAGE_luci-app-wol=y
-CONFIG_PACKAGE_luci-app-turboacc=y
+#CONFIG_PACKAGE_luci-app-turboacc=y
 
 #argon
 CONFIG_PACKAGE_luci-theme-argon=y
