@@ -158,7 +158,7 @@ jobs:
         cp openwrt/bin/targets/*/*/*.bin upload/
         
     - name: Get Current Date
-      run: echo "CURRENT_DATE=$(date '+%Y%m%d%H%M%S')" >> $GITHUB_ENV
+      run: echo "CURRENT_DATE=$(date '+%Y%m%d')" >> $GITHUB_ENV
       
     - name: Upload OpenWrt Firmware to Release
       uses: ncipollo/release-action@main
@@ -172,7 +172,7 @@ jobs:
           首次使用建议全新刷写
           NSS满血加速！
           * 基本信息
-          IP: 10.0.0.1
+          IP: 192.168.1.1
           账户: root
           密码: 空
           
