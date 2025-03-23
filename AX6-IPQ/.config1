@@ -5245,7 +5245,7 @@ CONFIG_PACKAGE_luci-app-cpufreq=y
 # CONFIG_PACKAGE_luci-app-cshark is not set
 # CONFIG_PACKAGE_luci-app-dawn is not set
 # CONFIG_PACKAGE_luci-app-dcwapd is not set
-CONFIG_PACKAGE_luci-app-ddns=y
+###CONFIG_PACKAGE_luci-app-ddns=y
 # CONFIG_PACKAGE_luci-app-dockerman is not set
 # CONFIG_PACKAGE_luci-app-dump1090 is not set
 # CONFIG_PACKAGE_luci-app-dynapoint is not set
@@ -5273,7 +5273,7 @@ CONFIG_PACKAGE_luci-app-firewall=y
 # CONFIG_PACKAGE_luci-app-lxc is not set
 # CONFIG_PACKAGE_luci-app-minidlna is not set
 # CONFIG_PACKAGE_luci-app-mjpg-streamer is not set
-CONFIG_PACKAGE_luci-app-mosdns=y
+###CONFIG_PACKAGE_luci-app-mosdns=y
 # CONFIG_PACKAGE_luci-app-mosquitto is not set
 # CONFIG_PACKAGE_luci-app-mwan3 is not set
 # CONFIG_PACKAGE_luci-app-natmap is not set
@@ -5311,7 +5311,7 @@ CONFIG_PACKAGE_luci-app-package-manager=y
 # CONFIG_PACKAGE_luci-app-snmpd is not set
 # CONFIG_PACKAGE_luci-app-softether is not set
 # CONFIG_PACKAGE_luci-app-splash is not set
-CONFIG_PACKAGE_luci-app-sqm=y
+###CONFIG_PACKAGE_luci-app-sqm=y
 # CONFIG_PACKAGE_luci-app-squid is not set
 # CONFIG_PACKAGE_luci-app-sshtunnel is not set
 # CONFIG_PACKAGE_luci-app-statistics is not set
@@ -5327,18 +5327,18 @@ CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_NFT_FULLCONE=y
 # CONFIG_PACKAGE_luci-app-udpxy is not set
 # CONFIG_PACKAGE_luci-app-uhttpd is not set
 # CONFIG_PACKAGE_luci-app-unbound is not set
-CONFIG_PACKAGE_luci-app-upnp=y
+###CONFIG_PACKAGE_luci-app-upnp=y
 # CONFIG_PACKAGE_luci-app-usbmodem is not set
 # CONFIG_PACKAGE_luci-app-usteer is not set
 # CONFIG_PACKAGE_luci-app-v2raya is not set
-CONFIG_PACKAGE_luci-app-vlmcsd=y
+###CONFIG_PACKAGE_luci-app-vlmcsd=y
 # CONFIG_PACKAGE_luci-app-vnstat2 is not set
 # CONFIG_PACKAGE_luci-app-watchcat is not set
 # CONFIG_PACKAGE_luci-app-wifischedule is not set
 # CONFIG_PACKAGE_luci-app-wol is not set
 # CONFIG_PACKAGE_luci-app-xfrpc is not set
 # CONFIG_PACKAGE_luci-app-xinetd is not set
-CONFIG_PACKAGE_luci-app-zerotier=y
+###CONFIG_PACKAGE_luci-app-zerotier=y
 # end of 3. Applications
 
 #
@@ -5475,7 +5475,7 @@ CONFIG_PACKAGE_luci-i18n-cpufreq-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-ddns-uk is not set
 # CONFIG_PACKAGE_luci-i18n-ddns-vi is not set
 # CONFIG_PACKAGE_luci-i18n-ddns-yua is not set
-CONFIG_PACKAGE_luci-i18n-ddns-zh-cn=y
+###CONFIG_PACKAGE_luci-i18n-ddns-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-ddns-zh-tw is not set
 # CONFIG_PACKAGE_luci-i18n-firewall-ar is not set
 # CONFIG_PACKAGE_luci-i18n-firewall-bg is not set
@@ -5513,7 +5513,7 @@ CONFIG_PACKAGE_luci-i18n-ddns-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-firewall-yua is not set
 CONFIG_PACKAGE_luci-i18n-firewall-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-firewall-zh-tw is not set
-CONFIG_PACKAGE_luci-i18n-mosdns-zh-cn=y
+###CONFIG_PACKAGE_luci-i18n-mosdns-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-package-manager-ar is not set
 # CONFIG_PACKAGE_luci-i18n-package-manager-bg is not set
 # CONFIG_PACKAGE_luci-i18n-package-manager-bn is not set
@@ -5582,7 +5582,7 @@ CONFIG_PACKAGE_luci-i18n-package-manager-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-sqm-tr is not set
 # CONFIG_PACKAGE_luci-i18n-sqm-uk is not set
 # CONFIG_PACKAGE_luci-i18n-sqm-vi is not set
-CONFIG_PACKAGE_luci-i18n-sqm-zh-cn=y
+###CONFIG_PACKAGE_luci-i18n-sqm-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-sqm-zh-tw is not set
 CONFIG_PACKAGE_luci-i18n-turboacc-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-upnp-ar is not set
@@ -5618,9 +5618,9 @@ CONFIG_PACKAGE_luci-i18n-turboacc-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-upnp-uk is not set
 # CONFIG_PACKAGE_luci-i18n-upnp-vi is not set
 # CONFIG_PACKAGE_luci-i18n-upnp-yua is not set
-CONFIG_PACKAGE_luci-i18n-upnp-zh-cn=y
+###CONFIG_PACKAGE_luci-i18n-upnp-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-upnp-zh-tw is not set
-CONFIG_PACKAGE_luci-i18n-vlmcsd-zh-cn=y
+###CONFIG_PACKAGE_luci-i18n-vlmcsd-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-vlmcsd-zh-tw is not set
 CONFIG_PACKAGE_luci-i18n-zerotier-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-zerotier-zh-tw is not set
