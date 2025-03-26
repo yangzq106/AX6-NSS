@@ -1,5 +1,5 @@
 
-name: Build OpenWRT for AX6-NSS
+name: Build OpenWRT For AX6-NSS
 
 on:
   repository_dispatch:
