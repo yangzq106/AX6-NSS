@@ -10,7 +10,7 @@ on:
         required: false
         default: 'false'
   schedule:
-    - cron: 37 3 * * *
+    - cron: 36 3 * * 5
 env:
   REPO_URL: https://github.com/VIKINGYFY/immortalwrt
   REPO_BRANCH: main
